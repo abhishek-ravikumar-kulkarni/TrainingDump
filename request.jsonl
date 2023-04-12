@@ -1,0 +1,36 @@
+{
+"prompt": "Write a request template using fdk to fetch products from shopify",
+"completion": "{\n  \"fetchProducts\": {\n      \"schema\": {\n          \"method\": \"GET\",\n          \"host\": \"https://<%= iparams.domain %>.myshopify.com\",\n          \"path\": \"/admin/products.json\",\n          \"headers\": {\n              \"Authorization\": \"Bearer <%= iparam.apikey %>\",\n              \"Content-Type\": \"application/json\"\n          }\n      }\n  }\n}\n\n"
+}
+{
+"prompt": "Write a request template using fdk to fetch only 5 products from shopify",
+"completion": "{\n  \"fetchProductsWithLimit\": {\n      \"schema\": {\n          \"method\": \"GET\",\n          \"host\": \"https://<%= iparams.domain %>.myshopify.com\",\n          \"path\": \"/admin/products.json\",\n          \"headers\": {\n              \"Authorization\": \"Bearer <%= iparam.apikey %>\",\n              \"Content-Type\": \"application/json\"\n          },\n          \"query\": {\n            \"limit\": 5\n          }\n      }\n  }\n}\n\n"
+}
+{
+"prompt": "Write a request template using fdk to fetch orders from shopify",
+"completion": "{\n  \"fetchOrders\": {\n      \"schema\": {\n          \"method\": \"GET\",\n          \"host\": \"https://<%= iparams.domain %>.myshopify.com\",\n          \"path\": \"/api/v2/orders.json\",\n          \"headers\": {\n              \"Authorization\": \"Bearer <%= iparam.apikey %>\",\n              \"Content-Type\": \"application/json\"\n          }\n      }\n  }\n}\n"
+}
+{
+"prompt": "Write a request template using fdk to fetch only 5 orders from shopify",
+"completion": "{\n  \"fetchOrdersWithLimit\": {\n      \"schema\": {\n          \"method\": \"GET\",\n          \"host\": \"https://<%= iparams.domain %>.myshopify.com\",\n          \"path\": \"/api/v2/orders.json\",\n          \"headers\": {\n              \"Authorization\": \"Bearer <%= iparam.apikey %>\",\n              \"Content-Type\": \"application/json\"\n          },\n          \"query\": {\n            \"limit\": 5\n          }\n      }\n  }\n}\n"
+}
+{
+"prompt": "Write a request template using fdk to fetch products from shopify with retrydelay options",
+"completion": "{\n  \"fetchProducts\": {\n      \"schema\": {\n          \"method\": \"GET\",\n          \"host\": \"https://<%= iparams.domain %>.myshopify.com\",\n          \"path\": \"/admin/products.json\",\n          \"headers\": {\n              \"Authorization\": \"Bearer <%= iparam.apikey %>\",\n              \"Content-Type\": \"application/json\"\n          }\n      },\n      \"options\": {\n          \"retryDelay\": 1000\n      }\n  }\n}\n\n"
+}
+{
+"prompt": "Write a request template using fdk to create an order to servicenow",
+"completion": "{\n  \"createOrders\": {\n      \"schema\": {\n          \"method\": \"POST\",\n          \"host\": \"https://instance.service-now.com\",\n          \"path\": \"/api/sn_csm_order_mgmt/order/\",\n          \"headers\": {\n              \"Authorization\": \"Bearer <%= iparam.authkey %>\",\n              \"Content-Type\": \"application/json\"\n          }\n      }\n  }\n}\n"
+}
+{
+"prompt": "Write a request template using fdk to fetch orders from servicenow",
+"completion": "{\n  \"fetchOrders\": {\n      \"schema\": {\n          \"method\": \"GET\",\n          \"host\": \"https://instance.service-now.com\",\n          \"path\": \"/api/sn_csm_order_mgmt/order/\",\n          \"headers\": {\n              \"Authorization\": \"Bearer <%= iparam.authkey %>\",\n              \"Content-Type\": \"application/json\"\n          }\n      }\n  }\n}\n"
+}
+{
+"prompt": "Write a request template using fdk to fetch orders from servicenow with retry delay options",
+"completion": "{\n  \"fetchOrdersWithLimit\": {\n      \"schema\": {\n          \"method\": \"GET\",\n          \"host\": \"https://instance.service-now.com\",\n          \"path\": \"/api/sn_csm_order_mgmt/order/\",\n          \"headers\": {\n              \"Authorization\": \"Bearer <%= iparam.authkey %>\",\n              \"Content-Type\": \"application/json\"\n          },\n          \"query\": {\n            \"limit\": 5\n          }\n      },\n      \"options\": {\n          \"retryDelay\": 1000\n      }\n  }\n}\n"
+}
+{
+"prompt": "Write a request template using fdk to fetch only 5 orders from servicenow",
+"completion": "{\n  \"fetchOrdersWithLimit\": {\n      \"schema\": {\n          \"method\": \"GET\",\n          \"host\": \"https://instance.service-now.com\",\n          \"path\": \"/api/sn_csm_order_mgmt/order/\",\n          \"headers\": {\n              \"Authorization\": \"Bearer <%= iparam.authkey %>\",\n              \"Content-Type\": \"application/json\"\n          },\n          \"query\": {\n            \"limit\": 5\n          }\n      }\n  }\n}\n"
+}
